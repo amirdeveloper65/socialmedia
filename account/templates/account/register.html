@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Create an account{% endblock title %}
+
+
+{% block content %}
+<h1>Create an account</h1>
+<p>please , sign up using the following form.</p>
+<form method='post'>
+    {{ user_form.as_p }}{% csrf_token %}
+    <p><input type="submit" , value="Create my account"></p>
+</form>
+<div class="social">
+    <ul>
+        <li class="google">
+            <a href="{% url "social:begin" "google-oauth2" %}">Login with
+            Google</a>
+        </li>
+    </ul>
+</div>
+{% endblock content %}
+    
+    
