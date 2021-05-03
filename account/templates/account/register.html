@@ -11,14 +11,6 @@
     {{ user_form.as_p }}{% csrf_token %}
     <p><input type="submit" , value="Create my account"></p>
 </form>
-<div class="social">
-    <ul>
-        <li class="google">
-            <a href="{% url "social:begin" "google-oauth2" %}">Login with
-            Google</a>
-        </li>
-    </ul>
-</div>
 {% endblock content %}
     
     
